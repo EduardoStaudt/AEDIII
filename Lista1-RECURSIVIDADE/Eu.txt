@@ -1,0 +1,4 @@
+Aluno: Eduardo Andrei Staudt
+RA: 2783045
+Diciplina: AEDIII
+Lista: 1 - RECURSIVIDADE
