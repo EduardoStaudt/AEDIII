@@ -1,0 +1,11 @@
+1) Sendo p um ponteiro, qual a diferença entre:
+• p++; 
+• (*p)++;
+• *(p++);
+• O que quer dizer *(p+10);
+
+RESPOSTA: 
+p++ - faz o ponteiro que estava olhando para uma posição de memoria avançar e olhar para a próxima do mesmo tipo.
+(*p)++ aqui o valor interno da memoria apontada é incremetado em 1(++ = +1).
+*(p++) acessa o valor interno apontado por p e depois o ponteiro aponta para a proxima posição do mesmo tipo.
+*(p+10) aqui eh acessado o valor interno do endereco que esta dez posições a frente da posição apontada por p.
