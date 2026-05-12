@@ -1,0 +1,75 @@
+// MALLOC
+Ele cria um espaço na memória  
+Ex:
+    Elem* no = (Elem*) malloc(sizeof(Elem));
+    Crie um novo nó na memória e faça o ponteiro no apontar para ele.
+depois do malloc sempre se coloca essa verificação:
+    if(no == NULL)
+        return 0;
+
+
+
+// FREE
+AQUI SEMPRE COLOQUE SEM OS SINAIS DE PONTEIRO, POIS O FREE RECEBE O ENDEREÇO DO ESPAÇO A SER LIBERADO, E NÃO O VALOR DO PONTEIRO.
+Libera o espaço alocado na memória
+Ex: 
+    free(no); // libera um no que nao sera mais usado
+Exemplo de utilização:
+    Elem* no = pi->topo; // salva o nó que será removido
+    pi->topo = pi->topo->prox; // move o topo para o próximo
+    free(no); // libera o nó antigo
+
+    "salva em aux/no → move o ponteiro principal → free(aux/no)"
+
+
+
+// .C e .H
+Tudo que eh tipo de dado(struct, typedef struct elemento Pilha, enum) vai pro .h e implemetacoes e elementos(struct elemento, typedef strct elemento Elem) vao pro .c
+
+
+
+// PILHA:
+CRIA PILHA
+Pilha* cria_Pilha(){
+    Pilha* pi = (Pilha*) malloc(sizeof(Pilha));
+    if(pi != NULL)
+        *pi = NULL;
+    return pi;
+}
+
+Pilha* pi = ponteiro para a estrutura da pilha.
+pi->topo = ponteiro para o primeiro nó da pilha. esse so funciona se tiver aa struct pilha
+ou 
+*pi que tambem aponta pro topo
+Elem* no = ponteiro para um nó da pilha.
+no->prox = ponteiro para o próximo nó.
+
+FALA SE A PILHA EXISTE
+if(pi == NULL)
+    return 0;
+
+FALA SE TEM ALGUM ELEMENTO NA PILHA
+if(pi->topo == NULL) // Ela existe mas nao tem nada dentro
+    return 0;
+
+
+CRIA NO:
+Elem* no; // cria ponteiro para o novo nó
+
+no = (Elem*) malloc(sizeof(Elem)); // reserva memória para o nó
+
+if(no == NULL) // verifica se o malloc falhou
+    return 0;
+
+
+REMOVER SEM PERDER PONTEIRO:
+Elem* no = pi->topo; // salva o nó que será removido
+
+pi->topo = pi->topo->prox; // topo anda para o próximo
+
+free(no); // libera o antigo topo
+
+
+
+// FILA:
+

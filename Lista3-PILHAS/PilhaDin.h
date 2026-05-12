@@ -1,12 +1,10 @@
-//Arquivo PilhaDin.h
-
-struct aluno{
+struct aluno{ // Dados guardados no noh
     int matricula;
     char nome[30];
     float n1,n2,n3;
 };
 
-typedef struct elemento* Pilha;
+typedef struct elemento* Pilha; // 
 
 Pilha* cria_Pilha();
 void libera_Pilha(Pilha* pi);

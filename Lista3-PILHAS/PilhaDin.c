@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "PilhaDin.h" //inclui os Prot�tipos
+#include "PilhaDin.h" // tem que lembrar de importar esse daqui
 
-//Defini��o do tipo Pilha
-struct elemento{
+struct elemento{ // noh da pilha 
     struct aluno dados;
     struct elemento *prox;
 };
