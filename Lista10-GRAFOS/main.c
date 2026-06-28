@@ -21,16 +21,16 @@ int main(){
     //     nao direcionado: V={A,B,C}, E={{A,B},{B,C},{A,C}}
     // 1b) sequencia (1,1,2,3,3,4,4,6) soma=24, 24/2=12 arestas, possivel
     //     sequencia (3,3,3,3,3,5,5,5) soma=30, 15 arestas, possivel
-    //     (Fiz no excalidraw é o arquivo Aeropoto anexado aqui na tarefa)
+    //     (Fiz no excalidraw é o arquivo 1.png anexado aqui na tarefa)
 
     // EX2 - grafo dos aeroportos (BOS,JFK,ORD,SFO,LAX,DFW,MIA)
     // a) 11 arestas
     // b) 7 vertices
     // c) sim, da pra ir de DFW pra JFK passando por DFW->ORD->... ou direto se tiver
-    // d) caminho mais curto MIA->LAX = 611 (direto)
-    // e) matriz 7x7 com pesos (desenho feito a mao)
-    // f) lista de adjacencia por vertice (desenho feito a mao)
-    // g) AGM por PRIM (Fiz no excalidraw é o arquivo Aeropoto anexado aqui na tarefa)
+    // d) caminho mais curto MIA->LAX = 611 
+    // e) matriz 7x7 com pesos 
+    // f) lista de adjacencia por vertice 
+    // g) AGM por PRIM (Fiz no excalidraw é o arquivo 2.png anexado aqui na tarefa)
 
     // EX3 - explicacao das funcoes do Grafo.c
     // a) cria_Grafo: aloca struct, define nro_vertices/grau_max/eh_ponderado
