@@ -57,6 +57,8 @@ int main() {
             comandoSearch(raiz, argumento);
         } else if (strcmp(comando, "rm") == 0) {
             comandoRm(atual, argumento);
+        } else if (strcmp(comando, "open") == 0) {
+            comandoOpen(atual, argumento);
         } else if (strcmp(comando, "list") == 0) {
             comandoList(atual);
         } else if (strcmp(comando, "mkdir") == 0) {

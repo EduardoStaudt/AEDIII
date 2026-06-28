@@ -229,6 +229,34 @@ void comandoRm(No *atual, char argumento[]) {
     printf("%s removido\n", argumento);
 }
 
+void comandoOpen(No *atual, char argumento[]) {
+    if (strlen(argumento) == 0) {
+        printf("Informe o arquivo. Uso: open <arquivo>\n");
+        return;
+    }
+    No *alvo = buscarFilho(atual, argumento);
+    if (alvo == NULL) {
+        printf("Arquivo %s nao encontrado nesta pasta\n", argumento);
+        return;
+    }
+    if (alvo->tipo == PASTA) {
+        printf("%s e uma pasta, nao um arquivo\n", argumento);
+        return;
+    }
+
+    char comando[TAMANHO_LINHA + 50];
+    #ifdef _WIN32
+        sprintf(comando, "start \"\" \"%s\"", argumento);
+    #elif __APPLE__
+        sprintf(comando, "open \"%s\"", argumento);
+    #else
+        sprintf(comando, "xdg-open \"%s\"", argumento);
+    #endif
+
+    system(comando);
+    printf("Abrindo %s\n", argumento);
+}
+
 void comandoClear() {
     #ifdef _WIN32
         system("cls");
@@ -243,6 +271,7 @@ void comandoHelp() {
     printf("               Se a pasta nao existir, mostra as que comecam igual.\n");
     printf("search <nome>  Procura um arquivo ou pasta na arvore inteira e mostra o caminho.\n");
     printf("rm <nome>      Remove uma pasta ou arquivo da pasta atual liberando tudo dentro.\n");
+    printf("open <arquivo> Abre um arquivo da pasta atual no programa padrao do sistema.\n");
     printf("list           Lista as pastas e arquivos da pasta atual.\n");
     printf("mkdir <nome>   Cria uma pasta nova dentro da pasta atual.\n");
     printf("clear          Limpa a tela.\n");

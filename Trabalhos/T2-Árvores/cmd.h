@@ -32,6 +32,7 @@ void comandoMkdir(No *atual, char argumento[]);
 void buscarRecursivo(No *atual, char alvo[], int *contador);
 void comandoSearch(No *raiz, char argumento[]);
 void comandoRm(No *atual, char argumento[]);
+void comandoOpen(No *atual, char argumento[]);
 void comandoClear();
 void comandoHelp();
 

@@ -9,3 +9,4 @@ Meus Documentos/fontes/main.h
 Meus Documentos/imagens
 Meus Downloads/7zip.exe
 Meus Downloads/t2.rar
+Meus Documentos/T2-doc.pdf
